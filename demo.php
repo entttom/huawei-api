@@ -12,4 +12,6 @@ $router->setAddress('192.168.0.1');
 //Username is always admin as far as I can tell.
 $router->login('admin', 'admin');
 
-var_dump($router->getLedStatus());
+$tel_number = $_GET['tel_number'];
+$message = $_GET['message'];
+$router->sendSms($tel_number, $message);
